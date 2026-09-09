@@ -1,21 +1,18 @@
 #include<stdio.h>
 #include<locale.h>
-#include<time.h>
-#include<math.h>
 
 void printTime()
 {
 	int N, K, S;
-	time_t currentTime = time(NULL);
-	struct tm* now = localtime(&currentTime);
-	N = now->tm_hour;
-	K = now->tm_min;
-	S = now->tm_sec;
+	N = 21;
+	K = 46;
+	S = 24;
+
 	printf("Сейчас %d часов %d минут 00 секунд\n", N, K);
 	printf("Идет %d минута суток\n", N * 60 + K);
 	printf("До полуночи осталось %d часов и %d минут\n", 24 - N, 60 - K);
 	printf("С 8.00 прошло %d секунд\n", (((N - 8 + 24) % 24)) * 3600 + K * 60 + S);
-	printf("Текущий час = %1.2f суток и текущая минута = %1.2f часа\n", (float) N / 24, (float) K / 60);
+	printf("Текущий час = %1.2f суток и текущая минута = %1.2f часа\n", N / 24.0, K / 60.0);
 }
 
 void divide()
@@ -26,10 +23,10 @@ void divide()
 	printf("Дано:\n"
 		   "\t%4d\n"
 		   "\t%4d\n"
-		   "\t_______\n"
+		   "\t_________\n"
 		   "Ответ:\n"
-		   "\t%+3.3f\n",
-		   n, L, (float) n / L);
+		   "\t%+03d%.3f\n",
+		   n, L, n / L, 1.0 * n / L);
 }
 
 void paperwalls()
@@ -42,7 +39,7 @@ void paperwalls()
 
 	float wall_area = wall_length * wall_height;
 	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
-	int roll_quantity = ceil(wall_area / roll_area);
+	int roll_quantity = (wall_area + roll_area - 1) / roll_area; // Деление с округлением через прибавление делителя и вычитание 1
 	float total_price = roll_quantity * roll_price;
 	
 	printf("Обои для всей стены будут стоить: %6.2f руб.\n", total_price);
