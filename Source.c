@@ -34,14 +34,18 @@ void divide()
 
 void paperwalls()
 {
-	const int rollLength = 12;
-	const int rollWidth = 1;
-	int wallLength = 20;
-	int wallHeight = 3;
-	float rollPrice = 200;
+	const int ROLL_LENGTH = 12;
+	const int ROLL_WIDTH = 1;
+	float wall_length = 10;
+	float wall_height = 3;
+	float roll_price = 1450;
 
-	float totalPrice = ceil((float)(wallLength * wallHeight) / (rollLength * rollWidth)) * rollPrice;
-	printf("Обои будут стоить: %10.2f руб.\n", totalPrice);
+	float wall_area = wall_length * wall_height;
+	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
+	int roll_quantity = ceil((float)wall_area / roll_area);
+	float total_price = roll_quantity * roll_price;
+	
+	printf("Обои будут стоить: %6.2f руб.\n", total_price);
 }
 
 int main() 
