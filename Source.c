@@ -25,8 +25,8 @@ void divide()
 		   "\t%4d\n"
 		   "\t_________\n"
 		   "Ответ:\n"
-		   "\t%+03d%.3f\n",
-		   n, L, n / L, 1.0 * n / L);
+		   "\t%+08.3f\n",
+		   n, L, 1.0 * n / L);
 }
 
 void paperwalls()
