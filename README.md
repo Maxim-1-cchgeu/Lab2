@@ -34,8 +34,9 @@
 
 ```C
 #include<stdio.h>
+#include<locale.h>
 
-void main()
+int main()
 {
 	const int ROLL_LENGTH = 12;
 	const int ROLL_WIDTH = 1;
@@ -47,7 +48,8 @@ void main()
 	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
 	int roll_quantity = ceil((float)wall_area / roll_area);
 	float total_price = roll_quantity * roll_price;
-	
+
+	setlocale(LC_CTYPE, "RUS");
 	printf("Обои для всей стены будут стоить: %6.2f руб.\n", total_price);
 }
 ```
