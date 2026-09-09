@@ -35,11 +35,28 @@
 
 ## 2. Реализация программы
 
-<!-- Вставьте код программы-->
+```C
+#include<stdio.h>
 
+void main()
+{
+	const int ROLL_LENGTH = 12;
+	const int ROLL_WIDTH = 1;
+	float wall_length = 10;
+	float wall_height = 3;
+	float roll_price = 1450;
+   
+	float wall_area = wall_length * wall_height;
+	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
+	int roll_quantity = ceil((float)wall_area / roll_area);
+	float total_price = roll_quantity * roll_price;
+	
+	printf("Обои для всей стены будут стоить: %6.2f руб.\n", total_price);
+}
+```
 ## 3. Результаты работы программы
 
-[После запуска программы просто скопируйте вывод из консоли и вставьте его в этот раздел ]
+Обои будут стоить: 4350.00 руб.
 
 ## 4. Информация о разработчике
 
