@@ -47,7 +47,7 @@ void paperwalls()
 
 int main() 
 {
-	setlocale(LC_CTYPE, "RUS");
+	setlocale(LC_CTYPE, "UTF-8");
 	printf("%2d\n%4d\n%6d\n%8d\n ", 1, 2, 3, 4);
 	printf("%10.5f\n ", 12.234657);
 	printf("Остаток от деления %d на %d равен %d\n ", 7, 5, 7 % 5);
