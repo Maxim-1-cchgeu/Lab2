@@ -20,7 +20,7 @@
 5. Вычислить площадь рулона:
    - `roll_area` = `ROLL_LENGTH` * `ROLL_WIDTH`
 6. Вычислить количество рулонов, нужных для покрытия стены:
-   - `roll_quantity` = ceil(`wall_area` / `roll_area`)
+   - `roll_quantity` = (`wall_area` + `roll_area` - 1) / `roll_area`
 7. Вычислить стоимость рулонов:
    - `roll_price` = `К`
    - `total_price` = `roll_price` * `roll_quantity`
