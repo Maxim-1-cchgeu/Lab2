@@ -1,4 +1,4 @@
-﻿#include<stdio.h>
+#include<stdio.h>
 #include<locale.h>
 #include<time.h>
 #include<math.h>
@@ -45,7 +45,7 @@ void paperwalls()
 	int roll_quantity = ceil(wall_area / roll_area);
 	float total_price = roll_quantity * roll_price;
 	
-	printf("Обои будут стоить: %6.2f руб.\n", total_price);
+	printf("Обои для всей стены будут стоить: %6.2f руб.\n", total_price);
 }
 
 int main() 
