@@ -42,7 +42,7 @@ void paperwalls()
 
 	float wall_area = wall_length * wall_height;
 	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
-	int roll_quantity = ceil((float)wall_area / roll_area);
+	int roll_quantity = ceil(wall_area / roll_area);
 	float total_price = roll_quantity * roll_price;
 	
 	printf("Обои будут стоить: %6.2f руб.\n", total_price);
