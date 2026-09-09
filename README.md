@@ -43,13 +43,12 @@ int main()
 	float wall_length = 10;
 	float wall_height = 3;
 	float roll_price = 1450;
-   
+
 	float wall_area = wall_length * wall_height;
 	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
-	int roll_quantity = ceil((float)wall_area / roll_area);
+	int roll_quantity = (wall_area + roll_area - 1) / roll_area; // Деление с округлением через прибавление делителя и вычитание 1
 	float total_price = roll_quantity * roll_price;
-
-	setlocale(LC_CTYPE, "RUS");
+	
 	printf("Обои для всей стены будут стоить: %6.2f руб.\n", total_price);
 }
 ```
