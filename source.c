@@ -29,25 +29,9 @@ void divide()
 		   n, L, 1.0 * n / L);
 }
 
-void paperwalls()
-{
-	const int ROLL_LENGTH = 12;
-	const int ROLL_WIDTH = 1;
-	float wall_length = 10;
-	float wall_height = 3;
-	float roll_price = 1450;
-
-	float wall_area = wall_length * wall_height;
-	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
-	int roll_quantity = (wall_area + roll_area - 1) / roll_area; // Деление с округлением до верхней границы
-	float total_price = roll_quantity * roll_price;
-	
-	printf("Обои для всей стены будут стоить: %6.2f руб.\n", total_price);
-}
-
 int main() 
 {
-	setlocale(LC_CTYPE, "UTF-8");
+	setlocale(LC_CTYPE, "RUS.UTF-8");
 	printf("%2d\n%4d\n%6d\n%8d\n ", 1, 2, 3, 4);
 	printf("%10.5f\n ", 12.234657);
 	printf("Остаток от деления %d на %d равен %d\n ", 7, 5, 7 % 5);
@@ -57,6 +41,4 @@ int main()
 	printTime();
 	printf("\n");
 	divide();
-	printf("\n");
-	paperwalls();
 }
