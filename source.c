@@ -1,7 +1,16 @@
 #include<stdio.h>
 #include<locale.h>
 
-void printTime()
+void print_numbers()
+{
+	printf("%2d\n%4d\n%6d\n%8d\n", 1, 2, 3, 4);
+	printf("%10.5f\n", 12.234657);
+	printf("Остаток от деления %d на %d равен %d\n", 7, 5, 7 % 5);
+	printf("Произведение чисел %d и %d равно %d\n", 2000, 4, 2000 * 4);
+	printf("%e разделить %e равно %e\n", 5., 2000000., 5. / 2000000);
+}
+
+void print_time()
 {
 	int N, K, S;
 	N = 21;
@@ -32,13 +41,9 @@ void divide()
 int main() 
 {
 	setlocale(LC_CTYPE, "RUS.UTF-8");
-	printf("%2d\n%4d\n%6d\n%8d\n ", 1, 2, 3, 4);
-	printf("%10.5f\n ", 12.234657);
-	printf("Остаток от деления %d на %d равен %d\n ", 7, 5, 7 % 5);
-	printf("Произведение чисел %d и %d равно %d\n ", 2000, 4, 2000 * 4);
-	printf("%e разделить %e равно %e\n ", 5., 2000000., 5. / 2000000);
+	print_numbers();
 	printf("\n");
-	printTime();
+	print_time();
 	printf("\n");
 	divide();
 }
