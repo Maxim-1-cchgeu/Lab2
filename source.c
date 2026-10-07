@@ -1,5 +1,19 @@
-#include<stdio.h>
-#include<locale.h>
+#include <stdio.h>
+#include <locale.h>
+
+void print_numbers();
+void print_time();
+void divide();
+
+int main() 
+{
+	setlocale(LC_CTYPE, "RUS.UTF-8");
+	print_numbers();
+	puts("");
+	print_time();
+	puts("");
+	divide();
+}
 
 void print_numbers()
 {
@@ -36,14 +50,4 @@ void divide()
 		   "Ответ:\n"
 		   "\t%+08.3f\n",
 		   n, L, 1.0 * n / L);
-}
-
-int main() 
-{
-	setlocale(LC_CTYPE, "RUS.UTF-8");
-	print_numbers();
-	printf("\n");
-	print_time();
-	printf("\n");
-	divide();
 }
