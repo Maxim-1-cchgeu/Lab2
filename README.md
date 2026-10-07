@@ -40,9 +40,9 @@ int main()
 {
 	const int ROLL_LENGTH = 12;
 	const int ROLL_WIDTH = 1;
-	float wall_length = 10;
-	float wall_height = 3;
-	float roll_price = 1450;
+	float wall_length = 10.0f;
+	float wall_height = 3.0f;
+	float roll_price = 1450.0f;
 
 	float wall_area = wall_length * wall_height;
 	float roll_area = ROLL_LENGTH * ROLL_WIDTH;
