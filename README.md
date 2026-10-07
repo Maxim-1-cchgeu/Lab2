@@ -33,8 +33,8 @@
 ## 2. Реализация программы
 
 ```C
-#include<stdio.h>
-#include<locale.h>
+#include <stdio.h>
+#include <locale.h>
 
 int main()
 {
